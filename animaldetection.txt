@@ -1,0 +1,19 @@
+C:\Users\praju\PycharmProjects\Animal_Detection\venv\Scripts\activate.bat
+pip install opencv-python==4.4.0.42
+
+https://youtu.be/HXDD7-EnGBY
+https://youtu.be/diWDgKcH3E0
+https://www.computervision.zone/courses/object-detection-mobile-net-ssd/
+https://github.com/sidpro-hash/Object-Detection
+https://github.com/datitran/object_detector_app/tree/master/object_detection
+https://github.com/datitran/object_detector_app/blob/master/object_detection/g3doc/detection_model_zoo.md
+open cv dnn module : https://learnopencv.com/deep-learning-with-opencvs-dnn-module-a-definitive-guide/
+https://www.fypsolutions.com/opencv-python/ssdlite-mobilenet-object-detection-with-opencv-dnn/
+building dataset like coco : https://youtu.be/E-_o2Q0YTrs
+https://github.com/odundar/computer-vision/blob/master/OpenCV%20Object%20Detection%20DNN.ipynb
+.pb tp .pbtxt : https://gist.github.com/nimaid/17559858c7be0c6668142e258b894126
+
+using coco json for object detection : https://www.neuralception.com/cocodatasetapi/
+example project : https://takeoffprojects.com/project-details/animal-detection-in-farms-using-opencv--12492
+
+full project ex : https://gilberttanner.com/blog/creating-your-own-objectdetector/
