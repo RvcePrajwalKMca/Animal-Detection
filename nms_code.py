@@ -1,3 +1,4 @@
+from inspect import classify_class_attrs
 import cv2
 import numpy as np
 
@@ -25,7 +26,9 @@ net.setInputSwapRB(True)
 while True:
     success, img = cap.read()
     classIds, confs, bbox = net.detect(img, confThreshold=thres)
-
+    classIds = list(np.array(classIds))
+    # classIds = classIds.tolist()
+    print(classIds)
     bbox = list(bbox)
     confs = list(np.array(confs).reshape(1, -1)[0])
     confs = list(map(float, confs))
@@ -33,14 +36,13 @@ while True:
     # print(confs)
 
     indices = cv2.dnn.NMSBoxes(bbox, confs, thres, nms_threshold)
-    print(indices)
-
+    indices = list(indices)
     for i in indices:
-        i = i[0]
+        # i = i[0]
         box = bbox[i]
         x, y, w, h = box[0], box[1], box[2], box[3]
         cv2.rectangle(img, (x, y), (x + w, h + y), color=(0, 255, 0), thickness=2)
-        cv2.putText(img, classNames[classIds[i][0] - 1].upper(), (box[0] + 10, box[1] + 30),
+        cv2.putText(img, classNames[classIds[i] - 1].upper(), (box[0] + 10, box[1] + 30),
                     cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 0), 2)
 
     resized = cv2.resize(img, (800, 500))
