@@ -38,7 +38,6 @@ while True:
     indices = cv2.dnn.NMSBoxes(bbox, confs, thres, nms_threshold)
     indices = list(indices)
     for i in indices:
-        # i = i[0]
         box = bbox[i]
         x, y, w, h = box[0], box[1], box[2], box[3]
         cv2.rectangle(img, (x, y), (x + w, h + y), color=(0, 255, 0), thickness=2)
